@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="CSS/styleHIW.css">
+</head>
+<body>
+    <h1>How It Works</h1>
+    <div class="login">
+        <p>
+            Our website's main function is to generate an audio file from pre-recorded voices, which reads verses of the Quran accurately -- verses of your choice. You can also tag specific words to increase the potential accuracy of the desired generated file.
+        </p>
+        <p>
+            You start by either signing in, or if you're new to the website, registering.
+        </p>
+    </div>
+    <img src="image/MyProjects.jpeg" alt="MyProjects" class="Proj">
+    <div class="myProj">
+        <p>
+            As seen above, when your login is successful, you'll face the My Projects page. If you've created one in the past, you can revisit it and continue tagging or choosing what verses you want to generate.
+        </p>
+    </div>
+    <img src="image/Interface.jpeg" alt="Interface" class="I">
+    <div class="Inter">
+        <p>
+            After choosing or creating a project, you'll be faced with this page: the interface. Here, you can tag emotions and intonations, select suras and their verses, and select the voice you want that the model will use to generate the audio file.
+        </p>
+        <p>
+            We will now go through the technologies used in detail, and what we'll use to achieve each one.
+        </p>
+    </div>
+    <p class="VC">
+        <strong>
+        Voice Cloning
+        </strong>
+    </p>
+    <img src="image/Tacotron2.png" alt="Tacotron2" class="TT2">
+    <div class="VCDes">
+        <p>
+            For our purposes, we're using Tacotron2, which uses a recurrent sequence-to-sequence feature prediction
+ network with attention which predicts a sequence of mel spectrogram frames from an
+ input character sequence. 
+        </p>
+        <p>
+        The reasons for choosing Tacotron2: High quality speech
+ synthesis which is cable of generating speech with high naturalness and intelligibility, it
+ directly maps text input to a mel-spectrogram using an encoder–decoder with location
+sensitive attention, and attention mechanism which is give smooth and accurate for
+ difficult pronunciations.
+        </p>
+    </div>
+    <p class="TA">
+        <strong>
+        Text Annotation (tagging)
+        </strong>
+    </p>
+    <img src="image/Spacy.png" alt="SpaCy" class="SP">
+    <div class="TADes">
+        <p>
+            For text annotation/tagging, we will be using spaCy. 
+        </p>
+        <p>
+            spaCy uses a mix of rule-based
+            statistical and deep learning models, and uses a pipeline approach where text
+            is sent through a pipeline which consists of spaCy’s own tagging system and
+            both custom built pipelines or modified pipelines.
+        </p>
+    </div>
+    <button type="back" onclick="javascript:history.back()">Back to Login</button>
+</body>
+</html>

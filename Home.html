@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>My Projects</title>
+        <link rel="stylesheet" href="Home.css">
+        <script defer src="Home.js"></script>
+        <style>
+            /* Position delete button in the top-right of the project card */
+            .project-card {
+                position: relative; /* Required for absolute positioning inside the card */
+            }
+    
+            .project-card .delete-btn {
+                position: absolute; /* Enables placement relative to the card */
+                top: 10px; /* Distance from the top of the card */
+                right: 10px; /* Distance from the right of the card */
+                background: none; /* Removes default button background */
+                border: none; /* Removes border */
+                color: white; /* Matches the card's theme */
+                font-size: 20px; /* Larger size for better visibility */
+                cursor: pointer; /* Makes it clickable */
+            }
+    
+            .project-card .delete-btn:hover {
+                color: red; /* Optional: Add hover effect for better UX */
+            }
+        </style>
+    </head>
+    <body>
+        <div class="header">
+            <img src="logoo.png" alt="Logo">
+        </div>
+        <main>
+            <a href="How_it_works.html">How it works</a>
+            <a href="About_us.html">About us</a>
+        </main>
+    
+        <section class="projects-section">
+            <div class="projects-header">
+                <h2>My Projects</h2>
+                <button id="addProjectBtn">Add new project</button>
+            </div>
+            <div id="projectsGrid" class="projects-grid"></div>
+        </section>
+    
+        <!-- Modal Popup -->
+        <div id="projectModal" class="modal">
+            <div class="modal-content">
+                <span id="closeModal" class="close">&times;</span>
+                <img src="logo.png" alt="Logo" class="modal-logo">
+                <form id="projectForm">
+                    <input type="text" id="projectName" placeholder="Project Name" required>
+                    <select id="translatedVersion" required>
+                        <option value="" disabled selected>Translated version</option>
+                        <option value="Option 1">Option 1</option>
+                        <option value="Option 2">Option 2</option>
+                    </select>
+                    <select id="language" required>
+                        <option value="" disabled selected>Language</option>
+                        <option value="English">English</option>
+                        <option value="Arabic">Arabic</option>
+                    </select>
+                    
+                    <button type="submit">Next</button>
+                </form>
+            </div>
+        </div>
+        <div id="deleteModal" class="delete-modal">
+            <div class="delete-modal-content">
+                <p id="deleteMessage"></p>
+                <button id="confirmDelete" class="confirm-btn">Yes</button>
+                <button id="cancelDelete" class="cancel-btn">No</button>
+            </div>
+        </div>
+        
+    
+</html>

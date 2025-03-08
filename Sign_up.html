@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign Up</title>
+    <link rel="stylesheet" href="signup.css">
+    <script type="text/javascript" src="script.js" defer></script>
+</head>
+<body>
+    <div class="header">
+        <img src="logoo.png" alt="Logo">
+    </div>
+
+    <main>
+        <a href="How_it_works.html">How it works</a>
+        <a href="About_us.html">About us</a>
+    </main>
+
+    <div class="con">
+        <h2>Sign Up</h2>
+        <p id="error-message"></p>
+        
+        <form id="form">
+            <div>
+                <label>
+                    <input type="text" id="first-name" placeholder="First Name">
+                </label><br><br>
+            </div>
+            <div>
+                <label>
+                    <input type="text" id="username" placeholder="Username">
+                </label><br><br>
+            </div>
+            <div>
+                <label>
+                    <input type="email" id="email" placeholder="Email">
+                </label><br><br>
+            </div>
+            <div>
+                <label>
+                    <input type="password" id="password" placeholder="Password">
+                </label><br><br>
+            </div>
+            <div>
+                <label>
+                    <input type="password" id="password-again" placeholder="Password again">
+                </label><br><br>
+            </div>
+            <button type="submit" onclick="validateForm()">Sign up</button>
+        </form>
+
+        <!-- New Link Below -->
+        <p style="margin-top: 15px;">Already have an account? <a href="sign_in.html" style="color: blue;">Log in</a></p>
+    </div>
+</body>
+</html>
