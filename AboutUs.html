@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us Page</title>
+    <link rel="stylesheet" href="AboutUs.css">
+</head>
+<body>
+
+    <div class="header">
+        <img src="logoo.png" alt="Logo">
+    </div>
+
+    <main>
+        <a href="How_it_works.html">How it works</a>
+        <a href="Home.html">Home</a>
+    </main>
+
+    <section class="about-section">
+        <!-- Supervisor Section -->
+        <div class="supervisor-card">
+            <img src="mejdl.jpg" alt="Supervisor Image" class="supervisor-img">
+            <h2>Dr. Mejdl Safran</h2>
+            <p class="supervisor-title">Chair of the Research Chair of Online Dialogue and Cultural Communication</p>
+            <a href="https://faculty.ksu.edu.sa/en/mejdl" target="_blank" class="supervisor-link">Meet Dr. Mejdl Safran</a>
+        </div>
+
+        <!-- Descriptions Container: Chair + Rokn El Hiwar -->
+        <div class="descriptions-container">
+            <!-- Chair Description -->
+            <div class="chair-description">
+                <img src="research.jpg" alt="Chair Logo" class="chair-logo">
+                <h3>About the Research Chair</h3>
+                <p>
+                    The Research Chair of Online Dialogue and Cultural Communication is a pioneering initiative dedicated to advancing meaningful digital interactions and cross-cultural understanding. 
+                    Led by Dr. Mejdl Safran, the chair focuses on innovative projects that bridge technology and dialogue for societal impact.
+                </p>
+            </div>
+
+            <!-- Rokn El Hiwar Section -->
+            <div class="rokn-section">
+                <img src="hiwar.jpg" alt="Rokn El Hiwar Logo" class="rokn-logo">
+                <h3>About Rokn El Hiwar Charity</h3>
+                <p>
+                    Rokn El Hiwar Charity is a leading Saudi non-profit dedicated to online dawah through its E‑Dialogue Live Chat platform in multiple languages.
+                    Founded in 2011, it has engaged tens of thousands of users worldwide.
+                    Its volunteer team is trained in multi-language dialogue and cultural communication.
+                    It collaborates with the Research Chair on joint outreach projects to enhance digital dialogue.
+                    
+                </p>
+                </p>
+            </div>
+        </div>
+
+        <!-- Carousel (optional for chair images) -->
+        <div class="carousel-container">
+            <div class="carousel-wrapper">
+                <div class="carousel" id="carousel">
+                    <img src="ch.jpg" alt="Chair Image 1">
+                    <img src="ch2.jpg" alt="Chair Image 2">
+                    <img src="ch3.jpg" alt="Chair Image 3">
+                </div>
+            </div>
+            <div class="carousel-buttons">
+                <button onclick="prevImage()">&#10094;</button>
+                <button onclick="nextImage()">&#10095;</button>
+            </div>
+        </div>
+
+        <!-- Team Section -->
+        <div class="team-section">
+            <h3>Meet the Team</h3>
+            <div class="team-cards">
+                <div class="member-card">
+                    <img src="Yousef.JPG" class="member-img" alt="Yousef Al-Dayhani">
+                    <h4>Yousef Al-Dayhani</h4>
+                    <a href="http://www.aldayhani.me/?i=1" class="portfolio-link">View Portfolio</a>
+                </div>
+                <div class="member-card">
+                    <img src="https://cdn-icons-png.flaticon.com/512/149/149071.png" class="member-img" alt="Ziyad Al-abdulatif">
+                    <h4>Ziyad Al-abdulatif</h4>
+                    <a href="#" class="portfolio-link">View Portfolio</a>
+                </div>
+                <div class="member-card">
+                    <img src="https://cdn-icons-png.flaticon.com/512/149/149071.png" class="member-img" alt="Musaed Alquwayi">
+                    <h4>Musaed Alquwayi</h4>
+                    <a href="#" class="portfolio-link">View Portfolio</a>
+                </div>
+                <div class="member-card">
+                    <img src="https://cdn-icons-png.flaticon.com/512/149/149071.png" class="member-img" alt="Mohannad Alasmari">
+                    <h4>Mohannad Alasmari</h4>
+                    <a href="#" class="portfolio-link">View Portfolio</a>
+                </div>
+                <div class="member-card">
+                    <img src="https://cdn-icons-png.flaticon.com/512/149/149071.png" class="member-img" alt="Faris Alghofaily">
+                    <h4>Faris Alghofaily</h4>
+                    <a href="#" class="portfolio-link">View Portfolio</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <script>
+        const carousel = document.getElementById('carousel');
+        const images = carousel.querySelectorAll('img');
+        let index = 0;
+
+        function updateCarousel() {
+            carousel.style.transform = `translateX(-${index * 700}px)`;
+        }
+
+        function nextImage() {
+            index = (index + 1) % images.length;
+            updateCarousel();
+        }
+
+        function prevImage() {
+            index = (index - 1 + images.length) % images.length;
+            updateCarousel();
+        }
+    </script>
+</body>
+</html>
+
